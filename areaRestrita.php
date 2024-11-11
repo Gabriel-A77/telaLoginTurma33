@@ -43,7 +43,7 @@
                         </td>
 
                         <td>
-                            <a href="excluir.php?id=<?php echo $pessoa['id_usuario']; ?>">Excluir</a>
+                            <a href="delete.php?id=<?php echo $pessoa['id_usuario']; ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php endforeach;

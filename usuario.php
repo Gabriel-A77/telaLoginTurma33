@@ -87,7 +87,13 @@
                 return false;
             }
         }
-
+        public function excluirUsuario($id)
+        {
+            global $pdo;
+            $sql = $pdo->prepare("DELETE FROM usuario WHERE id_usuario = :id");
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+        }
     }
 
 

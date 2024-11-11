@@ -22,12 +22,11 @@ $stmt->fetch();
 $stmt->close();
  
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Recebendo os dados do formulário
+
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
  
-    // Atualizando os dados no banco
     $sql = "UPDATE usuario SET nome = ?, email = ?, telefone = ? WHERE id_usuario = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->bind_param("sssi", $nome, $email, $telefone, $id_usuario);
